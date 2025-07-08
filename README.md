@@ -2,6 +2,12 @@
 
 A containerized SSH honeypot that traps brute-force bots by slowly feeding them randomized SSH banners, delaying their attacks and gathering data.
 
+* Sends authentic SSH banners, custom messages, or random gibberish
+* Detects and analyzes attack patterns
+* Generates detailed summary reports
+* Exports data in TXT, JSON formats, or directly to AbuseIPDB API
+
+
 
 ## Usage
 
@@ -14,7 +20,7 @@ docker compose up --build -d
 ### 2. Generate Report
 
 ```bash
-docker exec endleshh -it python honeypot.py report
+docker exec endleshh -it python endlessh.py report
 ```
 
 Output example:
@@ -55,12 +61,12 @@ Output example:
 
 Monitor activity every 5 seconds:
 ```bash
-docker exec endleshh -it python honeypot.py monitor
+docker exec endleshh -it python endleshh.py monitor
 ```
 
 Monitor with custom interval (10 seconds):
 ```bash
-docker exec endleshh -it python honeypot.py monitor 10
+docker exec endleshh -it python endleshh.py monitor 10
 ```
 
 Output example:
@@ -79,12 +85,17 @@ Output example:
 
 Export to default file (attack_data.json):
 ```bash
-docker exec endleshh -it python honeypot.py export
+docker exec endleshh -it python endlessh.py export
 ```
 
 Export to custom file:
 ```bash
-docker exec endleshh -it python honeypot.py export my_attack_data.json
+docker exec endleshh -it python endleshh.py export my_attack_data.json
+```
+
+Export to TXT file for any blacklist:
+```bash
+docker exec endleshh -it python export_to_blacklist.py
 ```
 
 ### 5. Report to AbuseIPDB
