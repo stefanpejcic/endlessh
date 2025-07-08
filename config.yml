@@ -4,3 +4,5 @@ min_delay: 0.5
 max_delay: 1.5
 log_file: "connections.log"
 banners_file: "banners.txt"
+mode: "mixed"   # options: normal, gibberish, mixed
+gibberish_length: 30
