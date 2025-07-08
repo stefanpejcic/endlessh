@@ -12,7 +12,7 @@ USER endlessh
 
 WORKDIR /home/endlessh
 
-COPY endlessh.py config.yaml banners.txt ./
+COPY endlessh.py ./
 
 RUN pip install pyyaml
 
