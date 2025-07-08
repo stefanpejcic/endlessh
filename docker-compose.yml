@@ -10,6 +10,8 @@ services:
       - ./connections.log:/home/endlessh/connections.log
       - ./honeypot.db:/home/endlessh/honeypot.db
       - ./attack_data.json:/home/endlessh/attack_data.json
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
     security_opt:
       - no-new-privileges:true
     networks:
