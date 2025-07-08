@@ -1,0 +1,6 @@
+host: "0.0.0.0"
+port: 2222
+min_delay: 0.5
+max_delay: 1.5
+log_file: "connections.log"
+banners_file: "banners.txt"
