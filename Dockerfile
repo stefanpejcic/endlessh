@@ -17,7 +17,9 @@ WORKDIR /home/endlessh
 
 COPY endlessh.py ./
 
-RUN pip install pyyaml
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
 
 EXPOSE 2222
 
