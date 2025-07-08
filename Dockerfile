@@ -10,6 +10,9 @@ LABEL org.opencontainers.image.licenses="MIT"
 RUN adduser --disabled-password endlessh
 USER endlessh
 
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1
+
 WORKDIR /home/endlessh
 
 COPY endlessh.py ./
