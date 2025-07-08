@@ -6,6 +6,7 @@ services:
     ports:
       - "2222:2222" # 22 if not running real ssh service
     volumes:
+      - ./config.yaml:/home/endlessh/config.yaml:ro
       - ./connections.log:/home/endlessh/connections.log
       - ./honeypot.db:/home/endlessh/honeypot.db
       - ./attack_data.json:/home/endlessh/attack_data.json
