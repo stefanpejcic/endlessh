@@ -30,3 +30,7 @@ enable_fake_shell: true # Enable fake shell simulation after "auth"
 
 # Report to AbuseIPDB
 abuseipdb_api_key: "" # also schedule cron to run it daily, see docs
+
+# Export to txt file for any blacklist
+rbl_file: "last_7_days_ips.txt" # mount it or docker cp after creation
+rbl_days_period: 7
