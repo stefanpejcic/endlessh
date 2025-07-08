@@ -1,0 +1,6 @@
+SSH-2.0-OpenSSH_7.4
+SSH-2.0-OpenSSH_8.0
+SSH-2.0-OpenSSH_8.2p1 Ubuntu-4ubuntu0.5
+SSH-2.0-OpenSSH_9.0 Debian
+SSH-2.0-dropbear_2020.81
+SSH-2.0-Raspbian_9.9
