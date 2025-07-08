@@ -11,7 +11,7 @@ A containerized SSH honeypot that traps brute-force bots by slowly feeding them 
 docker compose up --build -d
 ```
 
-### 2. Generate Attack Analysis Report
+### 2. Generate Report
 
 ```bash
 docker exec endleshh -it python honeypot.py report
@@ -75,7 +75,7 @@ Output example:
 #   🚨 Attack pattern: 192.168.1.100 - brute_force
 ```
 
-### 4. Export Attack Data
+### 4. Export Data
 
 Export to default file (attack_data.json):
 ```bash
