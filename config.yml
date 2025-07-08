@@ -1,11 +1,28 @@
+# Server configuration
 host: "0.0.0.0"
 port: 2222
-min_delay: 0.5
-max_delay: 1.5
-chunk_size: 1
-initial_delay_range: [0.0, 1.5]
-max_bytes: 60         # optional: limit output length
+
+# Timing configuration
+min_delay: 0.1          # Minimum delay between data chunks
+max_delay: 0.3          # Maximum delay between data chunks
+initial_delay_range: [0.0, 0.5]  # Initial delay before sending data
+
+# File paths
 log_file: "connections.log"
+db_file: "honeypot.db"
 banners_file: "banners.txt"
-mode: "mixed"         # "normal", "gibberish", or "mixed"
+
+# Banner mode: "normal", "gibberish", or "mixed"
+mode: "mixed"
 gibberish_length: 30
+
+# Protocol settings
+chunk_size: 1           # Bytes to send per chunk
+max_bytes: null         # Maximum bytes to send (null = unlimited)
+
+# Authentication settings
+max_auth_attempts: 3    # Maximum authentication attempts per session
+session_timeout: 300    # Session timeout in seconds
+
+# Features
+enable_fake_shell: true # Enable fake shell simulation after "auth"
