@@ -2,8 +2,6 @@
 
 A containerized SSH honeypot that traps brute-force bots by slowly feeding them randomized SSH banners, delaying their attacks and gathering data.
 
-Heavily inpired by [skeeto/endlessh](https://github.com/skeeto/endlessh/tree/master)
-
 
 ## Usage
 
@@ -157,6 +155,9 @@ Common issues and solutions:
 3. **High CPU usage**: Increase delays or implement rate limiting
 4. **Permission denied**: Ensure proper file permissions
 
+## Credits
+
+Heavily inpired by [skeeto/endlessh](https://github.com/skeeto/endlessh/tree/master)
 
 ## TODO
 
