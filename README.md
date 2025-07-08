@@ -87,6 +87,17 @@ Export to custom file:
 docker exec endleshh -it python honeypot.py export my_attack_data.json
 ```
 
+### 5. Report to AbuseIPDB
+
+To automatically report all IPs to AbuseIPDB you need to setup api key in config.yaml:
+```bash
+abuseipdb_api_key: "IMSERT YOUR API KEY HERE"
+```
+and then configure a cron to run it daily:
+```bash
+30 23 * * * docker exec endleshh /usr/bin/python3 report_abuseipdb.py
+```
+
 
 ## Attack Pattern Detection
 
