@@ -2,7 +2,10 @@ host: "0.0.0.0"
 port: 2222
 min_delay: 0.5
 max_delay: 1.5
+chunk_size: 1
+initial_delay_range: [0.0, 1.5]
+max_bytes: 60         # optional: limit output length
 log_file: "connections.log"
 banners_file: "banners.txt"
-mode: "mixed"   # options: normal, gibberish, mixed
+mode: "mixed"         # "normal", "gibberish", or "mixed"
 gibberish_length: 30
