@@ -89,40 +89,6 @@ Export to custom file:
 docker exec endleshh -it python honeypot.py export my_attack_data.json
 ```
 
-## Database Schema
-
-The honeypot creates the following SQLite tables:
-
-### Sessions Table
-- `id` - Unique session identifier
-- `ip_address` - Client IP address
-- `start_time` - Session start timestamp
-- `end_time` - Session end timestamp
-- `duration` - Session duration in seconds
-- `fingerprint` - SSH client fingerprint (JSON)
-
-### Auth Attempts Table
-- `session_id` - References sessions.id
-- `ip_address` - Client IP address
-- `username` - Attempted username
-- `password` - Attempted password
-- `method` - Authentication method
-- `success` - Authentication success (always false)
-- `timestamp` - Attempt timestamp
-
-### Commands Table
-- `session_id` - References sessions.id
-- `command` - Command executed in fake shell
-- `timestamp` - Command execution timestamp
-
-### Attack Patterns Table
-- `ip_address` - Client IP address
-- `pattern_type` - Type of attack pattern
-- `description` - Pattern description
-- `severity` - Severity level (1-10)
-- `first_seen` - First occurrence timestamp
-- `last_seen` - Last occurrence timestamp
-- `occurrence_count` - Number of occurrences
 
 ## Attack Pattern Detection
 
