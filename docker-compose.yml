@@ -7,6 +7,8 @@ services:
       - "2222:2222" #22 if not running real ssh service
     volumes:
       - ./connections.log:/home/endlessh/connections.log
+      - ./honeypot.db:/home/endlessh/honeypot.db
+      -./attack_data.json:/home/endlessh/attack_data.json
     security_opt:
       - no-new-privileges:true
     networks:
