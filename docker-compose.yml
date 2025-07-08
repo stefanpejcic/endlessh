@@ -1,0 +1,17 @@
+services:
+  endlessh:
+    build: .
+    container_name: endlessh
+    restart: unless-stopped
+    ports:
+      - "2222:2222" #22 if not running real ssh service
+    volumes:
+      - ./connections.log:/home/endlessh/connections.log
+    security_opt:
+      - no-new-privileges:true
+    networks:
+      - endlessh-net
+
+networks:
+  endlessh-net:
+    driver: bridge
