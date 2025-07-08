@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Advanced SSH Honeypot Server - Captures authentication attempts, commands, and analyzes attack patterns
+SSH Honeypot Server - Captures authentication attempts, commands, and analyzes attack patterns
 """
 
 import asyncio
