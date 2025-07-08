@@ -1,13 +1,13 @@
 # 🐍 Endlessh
 
-A Python-based SSH tarpit that slows down brute-force bots by feeding them random SSH banners very slowly.
+A containerized SSH tarpit that slows down brute-force bots by feeding them random SSH banners very slowly.
 
 Heavily inpired by [skeeto/endlessh](https://github.com/skeeto/endlessh/tree/master)
 
 
 ## Usage
 
-### 1. Start the Honeypot Server
+### 1. Start the container
 
 ```
 docker compose up --build -d
