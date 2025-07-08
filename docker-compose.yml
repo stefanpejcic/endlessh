@@ -4,15 +4,24 @@ services:
     container_name: endlessh
     restart: unless-stopped
     ports:
-      - "2222:2222" #22 if not running real ssh service
+      - "2222:2222" # 22 if not running real ssh service
     volumes:
       - ./connections.log:/home/endlessh/connections.log
       - ./honeypot.db:/home/endlessh/honeypot.db
-      -./attack_data.json:/home/endlessh/attack_data.json
+      - ./attack_data.json:/home/endlessh/attack_data.json
     security_opt:
       - no-new-privileges:true
     networks:
       - endlessh-net
+    mem_limit: 1g
+    cpus: 1.0
+    pids_limit: 20
+    healthcheck:
+      test: ["CMD", "python", "-c", "import socket; s=socket.socket(); s.settimeout(2); s.connect(('localhost', 2222)); s.close()"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
 
 networks:
   endlessh-net:
