@@ -1,6 +1,6 @@
 # 🐍 Endlessh
 
-An containerized SSH tarpit that slows down brute-force bots by feeding them random SSH banners very slowly.
+A containerized SSH honeypot that traps brute-force bots by slowly feeding them randomized SSH banners, delaying their attacks and gathering data.
 
 Heavily inpired by [skeeto/endlessh](https://github.com/skeeto/endlessh/tree/master)
 
