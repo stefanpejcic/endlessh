@@ -26,3 +26,7 @@ session_timeout: 300    # Session timeout in seconds
 
 # Features
 enable_fake_shell: true # Enable fake shell simulation after "auth"
+
+
+# Report to AbuseIPDB
+abuseipdb_api_key: "" # also schedule cron to run it daily, see docs
