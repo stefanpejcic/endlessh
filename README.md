@@ -20,7 +20,7 @@ docker compose up --build -d
 ### 2. Generate Report
 
 ```bash
-docker exec endleshh -it python endlessh.py report
+docker exec endlessh python endlessh.py report
 ```
 
 Output example:
@@ -61,12 +61,12 @@ Output example:
 
 Monitor activity every 5 seconds:
 ```bash
-docker exec endleshh -it python endleshh.py monitor
+docker exec -it endlessh python endlessh.py monitor
 ```
 
 Monitor with custom interval (10 seconds):
 ```bash
-docker exec endleshh -it python endleshh.py monitor 10
+docker exec endlessh -it python endlessh.py monitor 10
 ```
 
 Output example:
@@ -85,17 +85,17 @@ Output example:
 
 Export to default file (attack_data.json):
 ```bash
-docker exec endleshh -it python endlessh.py export
+docker exec -it endlessh python endlessh.py export
 ```
 
 Export to custom file:
 ```bash
-docker exec endleshh -it python endleshh.py export my_attack_data.json
+docker exec -it endlessh python endlessh.py export my_attack_data.json
 ```
 
 Export to TXT file for any blacklist:
 ```bash
-docker exec endleshh -it python export_to_blacklist.py
+docker exec -it endlessh python export_to_blacklist.py
 ```
 
 ### 5. Report to AbuseIPDB
@@ -106,7 +106,7 @@ abuseipdb_api_key: "IMSERT YOUR API KEY HERE"
 ```
 and then configure a cron to run it daily:
 ```bash
-30 23 * * * docker exec endleshh /usr/bin/python3 report_abuseipdb.py
+30 23 * * * docker exec endlessh /usr/bin/python3 report_abuseipdb.py
 ```
 
 
