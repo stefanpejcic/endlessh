@@ -7,13 +7,15 @@ LABEL org.opencontainers.image.version="1.0.0"
 LABEL org.opencontainers.image.authors="Stefan Pejcic <stefan@pejcic.rs>"
 LABEL org.opencontainers.image.licenses="MIT"
 
+RUN adduser --disabled-password endlessh
+USER endlessh
+
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1
 
 WORKDIR /home/endlessh
 
 COPY endlessh.py ./
-RUN chown -R endlessh:endlessh /home/endlessh
 
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
