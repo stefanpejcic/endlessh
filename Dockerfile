@@ -10,7 +10,7 @@ LABEL org.opencontainers.image.licenses="MIT"
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1
 
-WORKDIR /
+WORKDIR /home/endlessh/
 
 COPY endlessh.py ./
 
