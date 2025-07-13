@@ -7,13 +7,10 @@ LABEL org.opencontainers.image.version="1.0.0"
 LABEL org.opencontainers.image.authors="Stefan Pejcic <stefan@pejcic.rs>"
 LABEL org.opencontainers.image.licenses="MIT"
 
-RUN adduser --disabled-password endlessh
-USER endlessh
-
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1
 
-WORKDIR /home/endlessh
+WORKDIR /
 
 COPY endlessh.py ./
 
