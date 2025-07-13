@@ -3,6 +3,7 @@
 SSH Honeypot Server - Captures authentication attempts, commands, and analyzes attack patterns
 """
 
+import sys
 import asyncio
 import random
 import string
